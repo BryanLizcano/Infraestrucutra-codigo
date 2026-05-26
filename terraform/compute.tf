@@ -49,7 +49,7 @@ resource "aws_lb" "lab_alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_sg.id]
-  
+
   # Distribución del ALB en múltiples Zonas de Disponibilidad
   subnets = [
     data.aws_subnets.public.ids[0],
